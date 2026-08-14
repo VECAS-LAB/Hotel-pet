@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Ver reserva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li class="ativo"><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / <a href="reservas.html">reservas</a> / ver reserva
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel painel-detalhe">
+          <h2>Ver reserva</h2>
+          <dl class="detalhe-lista">
+            <dt>Id:</dt><dd>1234099871</dd>
+            <dt>Proprietário:</dt><dd>José da Silva</dd>
+            <dt>Pet:</dt><dd><a href="pet-ver.html">Max</a></dd>
+            <dt>Chegada:</dt><dd>02/05/2021</dd>
+            <dt>Partida:</dt><dd>07/05/2021</dd>
+            <dt>Notas:</dt><dd>Lorem ipsum ...</dd>
+            <dt>Anotações dos Funcionários:</dt><dd>Lorem ipsum ...</dd>
+            <dt>Imagens:</dt>
+            <dd class="galeria-imagens">
+              <div class="imagem-preview"><img src="assets/img-placeholder.png" alt="Imagem 1 da estadia"></div>
+              <div class="imagem-preview"><img src="assets/img-placeholder.png" alt="Imagem 2 da estadia"></div>
+              <div class="imagem-preview"><img src="assets/img-placeholder.png" alt="Imagem 3 da estadia"></div>
+            </dd>
+            <dt>Status:</dt><dd><span class="badge badge-finalizada">Finalizada</span></dd>
+            <dt>Total das diárias:</dt><dd>R$ 40,00</dd>
+            <dt>Recibo:</dt><dd><a href="#" class="link-arquivo">📎 recibo.pdf</a></dd>
+            <dt>Criado em:</dt><dd>02/05/2021</dd>
+            <dt>Atualizado em:</dt><dd>07/05/2021</dd>
+          </dl>
+          <a href="reservas.html" class="botao botao-outline">← Voltar</a>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

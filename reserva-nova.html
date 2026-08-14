@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Nova reserva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li class="ativo"><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / <a href="reservas.html">reservas</a> / nova reserva
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel painel-formulario">
+          <h2>Fazer reserva</h2>
+          <form action="#" method="post" class="form">
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" name="pet" required placeholder="Max">
+
+            <label>Período *</label>
+            <div class="campo-duplo">
+              <input type="date" name="periodo_inicio" required>
+              <input type="date" name="periodo_fim" required>
+            </div>
+
+            <label for="notas">Notas</label>
+            <textarea id="notas" name="notas" rows="4" placeholder="Observações sobre a estadia"></textarea>
+
+            <p class="total-diarias">Total das diárias: <strong>R$ 40,00</strong></p>
+
+            <div class="form-acoes">
+              <button type="submit" class="botao botao-primario">💾 Salvar</button>
+              <button type="reset" class="botao botao-outline">↺ Limpar</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

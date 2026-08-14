@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Reservas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li class="ativo"><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / Reservas
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel">
+          <div class="painel-cabecalho">
+            <h2>Reservas</h2>
+          </div>
+
+          <div class="acoes">
+            <a href="reserva-nova.html" class="botao botao-outline">+ Nova reserva</a>
+          </div>
+
+          <form action="#" method="get" class="filtros">
+            <div class="campo">
+              <label for="f-id">Id</label>
+              <input type="text" id="f-id" name="id">
+            </div>
+            <div class="campo">
+              <label for="f-periodo-ini">Período</label>
+              <div class="campo-duplo">
+                <input type="date" id="f-periodo-ini" name="periodo_inicio">
+                <input type="date" id="f-periodo-fim" name="periodo_fim">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="f-proprietario">Proprietário</label>
+              <input type="text" id="f-proprietario" name="proprietario">
+            </div>
+            <div class="campo">
+              <label for="f-total-min">Total</label>
+              <div class="campo-duplo">
+                <input type="text" id="f-total-min" name="total_min" placeholder="R$ 0,00">
+                <input type="text" id="f-total-max" name="total_max" placeholder="R$ 0,00">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="f-status">Status</label>
+              <select id="f-status" name="status">
+                <option value="">Todos</option>
+                <option value="reservada">Reservada</option>
+                <option value="em_progresso">Em progresso</option>
+                <option value="finalizada">Finalizada</option>
+                <option value="cancelada">Cancelada</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-pet">Pet</label>
+              <input type="text" id="f-pet" name="pet">
+            </div>
+
+            <div class="filtros-acoes">
+              <button type="submit" class="botao botao-primario">Pesquisar</button>
+              <button type="reset" class="botao botao-outline">Limpar</button>
+            </div>
+          </form>
+
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>Id</th>
+                <th>Pet</th>
+                <th>Chegada</th>
+                <th>Partida</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>12349984501</td>
+                <td>Max</td>
+                <td>02/05/2021</td>
+                <td>07/05/2021</td>
+                <td><span class="badge badge-reservada">Reservada</span></td>
+                <td>R$ 40,00</td>
+                <td class="tabela-acoes">
+                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-ver.html">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>12349984502</td>
+                <td>Ginger</td>
+                <td>02/05/2021</td>
+                <td>07/05/2021</td>
+                <td><span class="badge badge-progresso">Em progresso</span></td>
+                <td>R$ 40,00</td>
+                <td class="tabela-acoes">
+                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-ver.html">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>12349984503</td>
+                <td>Max</td>
+                <td>02/05/2021</td>
+                <td>07/05/2021</td>
+                <td><span class="badge badge-finalizada">Finalizada</span></td>
+                <td>R$ 40,00</td>
+                <td class="tabela-acoes">
+                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-ver.html">Visualizar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

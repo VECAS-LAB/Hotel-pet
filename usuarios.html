@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Usuários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li class="ativo"><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / Usuários
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel">
+          <div class="painel-cabecalho">
+            <h2>Usuários</h2>
+          </div>
+
+          <div class="acoes">
+            <a href="usuario-editar.html" class="botao botao-outline">👤+ novo</a>
+            <button type="button" class="botao botao-outline">👤- Remover</button>
+            <button type="button" class="botao botao-outline">✓ Mudar status</button>
+          </div>
+
+          <div class="alternador">
+            <span>Visualizar Por:</span>
+            <button type="button" class="pill pill-ativo">Usuários</button>
+            <button type="button" class="pill">Função</button>
+          </div>
+
+          <form action="#" method="get" class="filtros">
+            <div class="campo">
+              <label for="f-id">Id</label>
+              <input type="text" id="f-id" name="id">
+            </div>
+            <div class="campo">
+              <label for="f-criado-ini">Criado em</label>
+              <div class="campo-duplo">
+                <input type="date" id="f-criado-ini" name="criado_inicio">
+                <input type="date" id="f-criado-fim" name="criado_fim">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="f-email">E-mail</label>
+              <input type="email" id="f-email" name="email">
+            </div>
+            <div class="campo">
+              <label for="f-nome">Nome</label>
+              <input type="text" id="f-nome" name="nome">
+            </div>
+            <div class="campo">
+              <label for="f-status">Status</label>
+              <select id="f-status" name="status">
+                <option value="">Todos</option>
+                <option value="ativo">Ativo</option>
+                <option value="inativo">Inativo</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="f-funcao">Função</label>
+              <select id="f-funcao" name="funcao">
+                <option value="">Todas</option>
+                <option value="gerente">Gerente</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="cliente">Cliente</option>
+              </select>
+            </div>
+
+            <div class="filtros-acoes">
+              <button type="submit" class="botao botao-primario">Pesquisar</button>
+              <button type="reset" class="botao botao-outline">Limpar</button>
+            </div>
+          </form>
+
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th><input type="checkbox"></th>
+                <th>Foto</th>
+                <th>E-mail</th>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>Status</th>
+                <th>Criado em</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" checked></td>
+                <td><img src="assets/avatar-placeholder.png" alt="" class="avatar-tabela"></td>
+                <td>joaodasilva@pet.com</td>
+                <td>João da Silva</td>
+                <td>Gerente</td>
+                <td><span class="badge badge-ativo">Ativo</span></td>
+                <td>19/02/2020</td>
+                <td class="tabela-acoes">
+                  <a href="usuario-editar.html">Editar</a>
+                  <a href="usuario-editar.html">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><img src="assets/avatar-placeholder.png" alt="" class="avatar-tabela"></td>
+                <td>maria@pet.com</td>
+                <td>Maria da Silva</td>
+                <td>Funcionário</td>
+                <td><span class="badge badge-inativo">Inativo</span></td>
+                <td>19/02/2020</td>
+                <td class="tabela-acoes">
+                  <a href="usuario-editar.html">Editar</a>
+                  <a href="usuario-editar.html">Visualizar</a>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td><img src="assets/avatar-placeholder.png" alt="" class="avatar-tabela"></td>
+                <td>josedasilva@pet.com</td>
+                <td>José da Silva</td>
+                <td>Cliente</td>
+                <td><span class="badge badge-ativo">Ativo</span></td>
+                <td>19/02/2020</td>
+                <td class="tabela-acoes">
+                  <a href="usuario-editar.html">Editar</a>
+                  <a href="usuario-editar.html">Visualizar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

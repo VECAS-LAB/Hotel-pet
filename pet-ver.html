@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Ver pet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li class="ativo"><a href="pets.html">Pet</a></li>
+      <li><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / <a href="pets.html">pets</a> / ver pet
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel painel-detalhe">
+          <h2>Ver pet</h2>
+
+          <div class="acoes">
+            <a href="pet-editar.html" class="botao botao-outline">✏️ Editar</a>
+            <button type="button" class="botao botao-outline botao-perigo">🗑 Deletar</button>
+          </div>
+
+          <dl class="detalhe-lista">
+            <dt>Proprietário:</dt><dd>José da Silva</dd>
+            <dt>Id:</dt><dd>1234509876</dd>
+            <dt>Nome:</dt><dd>Max</dd>
+            <dt>Tipo:</dt><dd>Cachorro</dd>
+            <dt>Raça:</dt><dd>Pastor Alemão</dd>
+            <dt>Imagem:</dt>
+            <dd><div class="imagem-preview"><img src="assets/img-placeholder.png" alt="Foto de Max"></div></dd>
+            <dt>Reservas:</dt>
+            <dd>
+              <ul class="lista-reservas">
+                <li><a href="reserva-ver.html">02/05/2021 – 07/05/2021 (completa)</a></li>
+                <li><a href="reserva-ver.html">02/05/2021 – 07/05/2021 (em andamento)</a></li>
+              </ul>
+            </dd>
+          </dl>
+          <a href="pets.html" class="botao botao-outline">← Voltar</a>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

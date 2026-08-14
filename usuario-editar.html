@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Editar usuário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li class="ativo"><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / <a href="usuarios.html">Usuário</a> / Editar usuário
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel painel-formulario painel-com-imagem">
+          <h2>Editar Perfil</h2>
+          <form action="#" method="post" class="form form-com-imagem">
+            <div class="form-campos">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" value="joaodasilva@pet.com" required>
+
+              <label for="nome">Nome *</label>
+              <input type="text" id="nome" name="nome" value="João" required>
+
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" id="sobrenome" name="sobrenome" value="da Silva">
+
+              <label for="telefone">Telefone *</label>
+              <input type="tel" id="telefone" name="telefone" value="+55 (73) 99876-8943" required>
+
+              <label for="funcao">Função</label>
+              <select id="funcao" name="funcao">
+                <option value="cliente">Cliente</option>
+                <option value="funcionario" selected>Funcionário</option>
+                <option value="gerente">Gerente</option>
+              </select>
+              <p class="dica-campo">Somente o gerente pode alterar a função de um usuário.</p>
+            </div>
+
+            <div class="form-imagem">
+              <label>Foto</label>
+              <div class="imagem-preview imagem-preview-grande">
+                <img src="assets/avatar-placeholder.png" alt="Foto do usuário">
+              </div>
+            </div>
+
+            <div class="form-acoes">
+              <button type="submit" class="botao botao-primario">💾 Salvar</button>
+              <button type="reset" class="botao botao-outline">↺ Limpar</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Pet — Editar reserva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="reservas.html">Hotel Pet</a></h1>
+      <nav>
+        <ul>
+      <li><a href="pets.html">Pet</a></li>
+      <li><a href="usuarios.html">Usuários</a></li>
+      <li><a href="configuracoes.html">Configurações</a></li>
+      <li class="ativo"><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <a href="perfil.html" class="perfil-link">
+          <img src="assets/avatar-placeholder.png" alt="Foto de perfil" class="avatar">
+          <span>João da Silva</span>
+        </a>
+      </header>
+
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="reservas.html">Home</a> / <a href="reservas.html">reservas</a> / editar reserva
+      </nav>
+
+      <main class="conteudo">
+        <section class="painel painel-formulario">
+          <h2>Editar reserva</h2>
+          <form action="#" method="post" class="form">
+            <label for="proprietario">Proprietário *</label>
+            <input type="text" id="proprietario" name="proprietario" value="José da Silva" required>
+
+            <label for="pet">Pet *</label>
+            <input type="text" id="pet" name="pet" value="Max" required>
+
+            <label>Período *</label>
+            <div class="campo-duplo">
+              <input type="date" name="periodo_inicio" value="2021-05-02" required>
+              <input type="date" name="periodo_fim" value="2021-05-07" required>
+            </div>
+
+            <label for="notas">Notas</label>
+            <textarea id="notas" name="notas" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+
+            <label for="status">Status*</label>
+            <select id="status" name="status">
+              <option value="reservada">Reservada</option>
+              <option value="em_andamento" selected>Em andamento</option>
+              <option value="cancelada">Cancelado</option>
+              <option value="finalizada">Finalizado</option>
+            </select>
+
+            <label for="anotacoes-funcionario">Anotações do funcionário</label>
+            <textarea id="anotacoes-funcionario" name="anotacoes_funcionario" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+
+            <label>Imagens</label>
+            <div class="galeria-imagens">
+              <div class="imagem-preview">
+                <img src="assets/img-placeholder.png" alt="Imagem da estadia">
+              </div>
+              <button type="button" class="imagem-adicionar" aria-label="Adicionar imagem">+</button>
+            </div>
+
+            <p class="total-diarias">Total das diárias: <strong>R$ 40,00</strong></p>
+
+            <div class="nota-fiscal">
+              <button type="button" class="botao botao-destaque">📄 Adicionar nota Fiscal</button>
+              <a href="#" class="link-arquivo">📎 recibo.pdf</a>
+            </div>
+
+            <div class="form-acoes">
+              <button type="submit" class="botao botao-primario">💾 Salvar</button>
+              <button type="reset" class="botao botao-outline">↺ Limpar</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
