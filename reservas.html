@@ -23,9 +23,10 @@
     <div class="main">
       <header class="topbar">
         <a href="perfil.html" class="perfil-link">
-          <img src="assets/avatar-placeholder.svg" alt="Foto de perfil" class="avatar">
-          <span>João da Silva</span>
+          <img src="assets/avatar-veronica.jpg" alt="Foto de Veronica de Carvalho" class="avatar">
+          <span>Veronica de Carvalho</span>
         </a>
+        <a href="login.html" class="link-sair">Sair</a>
       </header>
 
       <nav class="breadcrumb" aria-label="breadcrumb">
@@ -42,7 +43,7 @@
             <a href="reserva-nova.html" class="botao botao-outline">+ Nova reserva</a>
           </div>
 
-          <form action="#" method="get" class="filtros">
+          <form action="#" method="get" class="filtros" onsubmit="return false;">
             <div class="campo">
               <label for="f-id">Id</label>
               <input type="text" id="f-id" name="id">
@@ -102,40 +103,40 @@
             <tbody>
               <tr>
                 <td><input type="checkbox"></td>
-                <td>12349984501</td>
-                <td>Max</td>
-                <td>02/05/2021</td>
-                <td>07/05/2021</td>
+                <td>84512201</td>
+                <td>Carpeado</td>
+                <td>25/08/2026</td>
+                <td>30/08/2026</td>
                 <td><span class="badge badge-reservada">Reservada</span></td>
-                <td>R$ 40,00</td>
+                <td>R$ 50,00</td>
                 <td class="tabela-acoes">
-                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-editar-reservada.html">Editar</a>
                   <a href="reserva-ver.html">Visualizar</a>
                 </td>
               </tr>
               <tr>
                 <td><input type="checkbox"></td>
-                <td>12349984502</td>
-                <td>Ginger</td>
-                <td>02/05/2021</td>
-                <td>07/05/2021</td>
+                <td>84512202</td>
+                <td>Miko</td>
+                <td>10/08/2026</td>
+                <td>22/08/2026</td>
                 <td><span class="badge badge-progresso">Em progresso</span></td>
-                <td>R$ 40,00</td>
+                <td>R$ 120,00</td>
                 <td class="tabela-acoes">
-                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-editar-em-progresso.html">Editar</a>
                   <a href="reserva-ver.html">Visualizar</a>
                 </td>
               </tr>
               <tr>
                 <td><input type="checkbox"></td>
-                <td>12349984503</td>
-                <td>Max</td>
-                <td>02/05/2021</td>
-                <td>07/05/2021</td>
+                <td>84512203</td>
+                <td>Hachi</td>
+                <td>01/07/2026</td>
+                <td>05/07/2026</td>
                 <td><span class="badge badge-finalizada">Finalizada</span></td>
                 <td>R$ 40,00</td>
                 <td class="tabela-acoes">
-                  <a href="reserva-editar.html">Editar</a>
+                  <a href="reserva-editar-finalizada.html">Editar</a>
                   <a href="reserva-ver.html">Visualizar</a>
                 </td>
               </tr>

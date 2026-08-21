@@ -1,23 +1,14 @@
-/* =============================================================
-   HOTEL PET — visão do Gerente
-   HTML/CSS puro, sem bibliotecas ou frameworks.
-   Paleta: azul (confiança/profissionalismo) + verde (cuidado/pet)
-   ============================================================= */
-
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap");
-
-/* -------------------- Reset básico -------------------- */
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, /* Geral */
+body { margin: 0; padding: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 button { font-family: inherit; cursor: pointer; background: none; border: none; }
 h1, h2, h3, p, dl, dd { margin: 0; }
 
-/* -------------------- Paleta e tokens -------------------- */
 :root {
-  /* Azul */
+  
   --azul-900: #0B3B6F;
   --azul-700: #1256A3;
   --azul-600: #1668C4;
@@ -25,14 +16,14 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   --azul-100: #DCEBFC;
   --azul-50:  #F0F7FF;
 
-  /* Verde */
+  
   --verde-800: #145A3C;
   --verde-600: #1E8E5A;
   --verde-500: #22A96B;
   --verde-100: #DCF5E8;
   --verde-50:  #EFFBF4;
 
-  /* Neutros (levemente frios, remetem a ambiente limpo/clínico do pet care) */
+  
   --cinza-900: #1F2A37;
   --cinza-600: #5B6B7C;
   --cinza-400: #94A3B8;
@@ -40,14 +31,14 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   --cinza-100: #F3F6FA;
   --branco: #FFFFFF;
 
-  /* Estados */
+  
   --vermelho-600: #DC3545;
   --vermelho-100: #FBE2E5;
   --amarelo-700: #9A6400;
   --amarelo-600: #D68A00;
   --amarelo-100: #FDF0D5;
 
-  /* Papéis semânticos */
+  
   --cor-primaria: var(--azul-600);
   --cor-primaria-escura: var(--azul-700);
   --cor-secundaria: var(--verde-600);
@@ -58,16 +49,15 @@ h1, h2, h3, p, dl, dd { margin: 0; }
   --cor-texto: var(--cinza-900);
   --cor-texto-suave: var(--cinza-600);
 
-  /* Tipografia */
-  --fonte-destaque: "Quicksand", "Segoe UI", Roboto, Arial, sans-serif;
-  --fonte-base: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  --fonte-destaque: "Segoe UI", Roboto, Arial, sans-serif;
+  --fonte-base: "Segoe UI", Roboto, Arial, sans-serif;
 
-  /* Forma e sombra */
+  
   --raio-sm: 6px;
   --raio-md: 10px;
   --raio-lg: 16px;
   --sombra: 0 1px 3px rgba(15, 40, 70, .08), 0 1px 2px rgba(15, 40, 70, .06);
-  --sombra-md: 0 10px 28px rgba(15, 40, 70, .12);
 }
 
 body {
@@ -87,15 +77,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   * { transition: none !important; animation: none !important; }
 }
 
-/* =============================================================
-   ESTRUTURA GERAL (sidebar + conteúdo)
-   ============================================================= */
+/* Estrutura */
 .layout { display: flex; min-height: 100vh; }
 
 .sidebar {
   width: 240px;
   flex-shrink: 0;
-  background: linear-gradient(190deg, var(--azul-700) 0%, var(--verde-800) 130%);
+  background-color: var(--azul-700);
   color: var(--branco);
   padding: 28px 18px;
   position: sticky;
@@ -134,7 +122,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font-weight: 700;
 }
 
-/* pequenos marcadores por seção — não exigem alterar o HTML */
 .sidebar nav a[href="pets.html"]::before,
 .sidebar nav a[href="pet-novo.html"]::before { content: "🐾"; }
 .sidebar nav a[href="usuarios.html"]::before { content: "👤"; }
@@ -147,10 +134,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 20px;
   padding: 16px 40px;
   background-color: var(--cor-superficie);
   border-bottom: 1px solid var(--cor-borda);
 }
+
+.link-sair {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--cinza-500);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color .15s ease, background-color .15s ease;
+}
+.link-sair:hover { color: var(--vermelho-600, #DC2626); background-color: var(--cinza-100); }
 
 .perfil-link {
   display: flex;
@@ -180,24 +178,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .conteudo { padding: 22px 40px 56px; }
 
-/* =============================================================
-   PAINÉIS / CARDS
-   ============================================================= */
+/* Painéis */
 .painel {
-  position: relative;
-  overflow: hidden;
   background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
   border-radius: var(--raio-lg);
-  box-shadow: var(--sombra);
   padding: 30px 32px;
-}
-
-.painel::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
 }
 
 .painel h2 {
@@ -213,9 +199,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .painel-cabecalho { margin-bottom: 4px; }
 
-/* =============================================================
-   BOTÕES
-   ============================================================= */
+/* Botões */
 .botao {
   display: inline-flex;
   align-items: center;
@@ -243,9 +227,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .botao-full { width: 100%; justify-content: center; }
 
-/* =============================================================
-   FORMULÁRIOS
-   ============================================================= */
+/* Formulários */
 .form, .form-auth { display: flex; flex-direction: column; }
 
 label {
@@ -308,15 +290,12 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 .link-arquivo { color: var(--cor-primaria); font-weight: 600; }
 .link-arquivo:hover { text-decoration: underline; }
 
-/* formulário com imagem ao lado (Pet, Usuário, Perfil) */
 .form-com-imagem { display: grid; grid-template-columns: 1fr 190px; gap: 8px 36px; align-items: start; }
 .form-com-imagem .form-campos { display: flex; flex-direction: column; }
 .form-com-imagem .form-imagem { display: flex; flex-direction: column; }
 .form-com-imagem .form-acoes { grid-column: 1 / -1; }
 
-/* =============================================================
-   FILTROS DE BUSCA
-   ============================================================= */
+/* Filtros */
 .filtros {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -331,7 +310,48 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 .filtros-acoes { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; }
 
 .acoes { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+/* Parte final da reserva */
+.total {
+  font-size: .98rem;
+  margin: 24px 0 18px;
+}
 
+.total strong {
+  color: var(--cor-secundaria-escura);
+  font-size: 1.15rem;
+  font-family: var(--fonte-destaque);
+}
+
+.documentos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.adicionar-nota {
+  padding: 10px 16px;
+  border: 1.5px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  font-size: .92rem;
+  font-weight: 600;
+}
+
+.recibo {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+.recibo:hover {
+  text-decoration: underline;
+}
+
+.acoes {
+  margin-top: 8px;
+}
 .alternador { display: flex; align-items: center; gap: 10px; margin: 22px 0 2px; font-size: .88rem; color: var(--cor-texto-suave); }
 .pill {
   padding: 6px 16px;
@@ -344,9 +364,7 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 }
 .pill-ativo { border-color: var(--cor-primaria); color: var(--cor-primaria-escura); background-color: var(--azul-50); }
 
-/* =============================================================
-   TABELAS
-   ============================================================= */
+/* Tabelas */
 .tabela { width: 100%; border-collapse: collapse; font-size: .89rem; margin-top: 22px; }
 
 .tabela thead th {
@@ -365,36 +383,22 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 .tabela tbody td { padding: 13px 16px; border-bottom: 1px solid var(--cor-borda); }
 .tabela tbody tr:hover { background-color: var(--azul-50); }
 
-.tabela-acoes { display: flex; gap: 14px; }
+.tabela-acoes {gap: 14px;vertical-align: middle;}
 .tabela-acoes a { color: var(--cor-primaria); font-weight: 600; }
 .tabela-acoes a:hover { text-decoration: underline; }
 
-.avatar-tabela { width: 30px; height: 30px; border-radius: 50%; }
+.avatar-tabela { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
 
-/* =============================================================
-   BADGES DE STATUS — pequeno "tag de coleira": um ponto à
-   esquerda evoca a placa de identificação do pet.
-   ============================================================= */
+/* Status */
 .badge {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 4px 13px 4px 21px;
+  padding: 4px 13px;
   border-radius: 999px;
   font-size: .76rem;
   font-weight: 700;
   border: 1.5px solid transparent;
   white-space: nowrap;
-}
-.badge::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: .6;
 }
 
 .badge-reservada, .badge-ativo { background-color: var(--verde-100); color: var(--verde-800); border-color: var(--verde-500); }
@@ -402,9 +406,7 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 .badge-finalizada { background-color: var(--azul-100); color: var(--azul-700); border-color: var(--azul-500); }
 .badge-inativo, .badge-cancelada { background-color: var(--vermelho-100); color: var(--vermelho-600); border-color: var(--vermelho-600); }
 
-/* =============================================================
-   IMAGENS / GALERIA
-   ============================================================= */
+/* Imagens */
 .imagem-preview {
   width: 90px;
   height: 90px;
@@ -436,10 +438,46 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
   transition: background-color .15s ease;
 }
 .imagem-adicionar:hover { background-color: var(--azul-100); }
+/* Imagens da reserva */
+.imagens-reserva {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
 
-/* =============================================================
-   TELAS DE DETALHE (ver reserva / ver pet)
-   ============================================================= */
+.imagem-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: var(--raio-md);
+    border: 1.5px dashed var(--cinza-400);
+    background-color: var(--cinza-100);
+    overflow: hidden;
+}
+
+.imagem-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adicionar-imagem {
+    width: 90px;
+    height: 90px;
+    border-radius: var(--raio-md);
+    border: 1.5px dashed var(--cor-primaria);
+    background-color: var(--azul-50);
+    color: var(--cor-primaria);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adicionar-imagem:hover {
+    background-color: var(--azul-100);
+}
+/* Detalhes */
 .detalhe-lista { display: grid; grid-template-columns: 190px 1fr; row-gap: 15px; margin-bottom: 28px; }
 .detalhe-lista dt { color: var(--cor-texto-suave); font-weight: 600; font-size: .88rem; }
 .detalhe-lista dd { font-size: .95rem; }
@@ -449,19 +487,16 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
 .lista-reservas a { color: var(--cor-primaria); font-weight: 500; }
 .lista-reservas a:hover { text-decoration: underline; }
 
-/* =============================================================
-   TELAS DE AUTENTICAÇÃO (login / cadastro)
-   ============================================================= */
+/* Login e cadastro */
 .auth-layout { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 
 .auth-imagem {
-  background: linear-gradient(165deg, var(--azul-700), var(--verde-600));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  overflow: hidden;
 }
-.auth-imagem img { max-width: 380px; width: 100%; }
+.auth-imagem img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .auth-form {
   display: flex;
@@ -507,18 +542,14 @@ input[type="checkbox"] { accent-color: var(--cor-primaria); width: 16px; height:
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform .15s ease;
 }
-.login-social a:hover { transform: translateY(-2px); }
 .login-social img { width: 42px; height: 42px; }
 
 .link-primario { color: var(--cor-primaria); font-weight: 600; }
 .link-primario:hover { text-decoration: underline; }
 .link-centralizado { text-align: center; display: block; margin-top: 6px; }
 
-/* =============================================================
-   RESPONSIVO
-   ============================================================= */
+/* Responsivo */
 @media (max-width: 960px) {
   .layout { flex-direction: column; }
   .sidebar { width: 100%; min-height: auto; position: relative; padding: 16px 20px; }

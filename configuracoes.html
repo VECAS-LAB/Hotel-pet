@@ -23,9 +23,10 @@
     <div class="main">
       <header class="topbar">
         <a href="perfil.html" class="perfil-link">
-          <img src="assets/avatar-placeholder.svg" alt="Foto de perfil" class="avatar">
-          <span>João da Silva</span>
+          <img src="assets/avatar-veronica.jpg" alt="Foto de Veronica de Carvalho" class="avatar">
+          <span>Veronica de Carvalho</span>
         </a>
+        <a href="login.html" class="link-sair">Sair</a>
       </header>
 
       <nav class="breadcrumb" aria-label="breadcrumb">
@@ -35,7 +36,7 @@
       <main class="conteudo">
         <section class="painel painel-formulario">
           <h2>Configurações</h2>
-          <form action="#" method="post" class="form">
+          <form action="#" method="post" class="form" onsubmit="return false;">
             <label for="valor-diaria">Valor da diária</label>
             <input type="text" id="valor-diaria" name="valor_diaria" value="R$ 10,00">
 
@@ -43,7 +44,7 @@
             <input type="number" id="vagas" name="vagas" value="3" min="0">
 
             <div class="form-acoes">
-              <button type="submit" class="botao botao-primario">💾 Salvar</button>
+              <a href="reservas.html" class="botao botao-primario">💾 Salvar</a>
               <button type="reset" class="botao botao-outline">↺ Limpar</button>
             </div>
           </form>

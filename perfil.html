@@ -23,9 +23,10 @@
     <div class="main">
       <header class="topbar">
         <a href="perfil.html" class="perfil-link">
-          <img src="assets/avatar-placeholder.svg" alt="Foto de perfil" class="avatar">
-          <span>João da Silva</span>
+          <img src="assets/avatar-veronica.jpg" alt="Foto de Veronica de Carvalho" class="avatar">
+          <span>Veronica de Carvalho</span>
         </a>
+        <a href="login.html" class="link-sair">Sair</a>
       </header>
 
       <nav class="breadcrumb" aria-label="breadcrumb">
@@ -35,19 +36,19 @@
       <main class="conteudo">
         <section class="painel painel-formulario painel-com-imagem">
           <h2>Editar Perfil</h2>
-          <form action="#" method="post" class="form form-com-imagem">
+          <form action="#" method="post" class="form form-com-imagem" onsubmit="return false;">
             <div class="form-campos">
               <label for="email">E-mail *</label>
-              <input type="email" id="email" name="email" value="joaodasilva@pet.com" required>
+              <input type="email" id="email" name="email" value="veronicadecarvalho@pet.com" required>
 
               <label for="nome">Nome *</label>
-              <input type="text" id="nome" name="nome" value="João" required>
+              <input type="text" id="nome" name="nome" value="Veronica" required>
 
               <label for="sobrenome">Sobrenome</label>
-              <input type="text" id="sobrenome" name="sobrenome" value="da Silva">
+              <input type="text" id="sobrenome" name="sobrenome" value="de Carvalho">
 
               <label for="telefone">Telefone *</label>
-              <input type="tel" id="telefone" name="telefone" value="+55 (73) 99876-8943" required>
+              <input type="tel" id="telefone" name="telefone" placeholder="+55 (73) 9XXXX-XXXX" required>
 
               <label for="funcao">Função</label>
               <select id="funcao" name="funcao" disabled>
@@ -58,12 +59,12 @@
             <div class="form-imagem">
               <label>Foto</label>
               <div class="imagem-preview imagem-preview-grande">
-                <img src="assets/avatar-placeholder.svg" alt="Foto de João da Silva">
+                <img src="assets/avatar-veronica.jpg" alt="Foto de Veronica de Carvalho">
               </div>
             </div>
 
             <div class="form-acoes">
-              <button type="submit" class="botao botao-primario">💾 Salvar</button>
+              <a href="reservas.html" class="botao botao-primario">💾 Salvar</a>
               <button type="reset" class="botao botao-outline">↺ Limpar</button>
             </div>
           </form>
